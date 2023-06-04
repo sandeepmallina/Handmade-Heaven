@@ -1,0 +1,127 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 10px;
+  position: relative;
+  background-color: white;
+  padding-bottom: 1%;
+  /* font-family: "Poppins", sans-serif; */
+}
+.favourite-icon {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 3%;
+  background-color: #f5f6f6;
+  border-radius: 12.5rem;
+}
+.favourite-icon:hover {
+  background-color: #ffb9b9;
+}
+.product-image {
+  height: 200px;
+  margin: 5px;
+  object-fit: contain;
+}
+.product-image-container {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 1%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+.product-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  margin: 3px 0 3px 0;
+}
+.product-title-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 3px 0 3px 0;
+}
+.product-name {
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.product-price {
+  font-size: 1.125rem;
+  font-weight: bold;
+
+  color: orange;
+}
+.text-span {
+  position: relative;
+  top: -4px;
+  font-size: 13px;
+}
+.product_rating {
+  display: flex;
+  margin: 5px 0 5px 0;
+}
+.product-description {
+  font-size: 12px;
+  line-height: 16.5px;
+  text-align: left;
+}
+
+.product-data {
+  text-align: left;
+}
+.add-to-cart-button {
+  padding: 10px 20px;
+  border: 2px solid orange;
+  border-radius: 28px;
+  background-color: white;
+  margin: 2px 0;
+  color: black;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  transition: 0.8s;
+  color: white;
+  background-color: darkorange;
+}
+.cart-bar {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  height: 30px;
+  border: 2px solid orange;
+  border-radius: 28px;
+  margin: 2px 0;
+  color: black;
+  font-size: 0.875rem;
+}
+.count-items {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.increment-btn,
+.decrement-btn {
+  background-color: white;
+  border: none;
+  font-size: 18px;
+  width: 30px;
+  background-color: rgb(238, 233, 233);
+  border-radius: 0 28px 28px 0;
+}
+.decrement-btn:hover,
+.increment-btn:hover {
+  background-color: #898c8c;
+}
+.decrement-btn {
+  border-radius: 28px 0 0 28px;
+}

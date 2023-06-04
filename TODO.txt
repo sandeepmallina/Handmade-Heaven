@@ -1,0 +1,10 @@
+to deploy the front end use cmd 
+1)then firestore deploy to deploy
+2)
+
+to deploy backend same cmd the upgrade the firebase plan blaze
+ by seeing 
+8:15:39 in video qazzi
+
+
+firebase emulators start

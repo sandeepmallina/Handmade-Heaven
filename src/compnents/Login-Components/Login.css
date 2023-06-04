@@ -1,0 +1,123 @@
+.login_container {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+.right_img {
+  height: 620px;
+  width: 800px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.login_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form_header {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  gap: 1rem;
+}
+.input_style {
+  background-color: #fdfdfd;
+  position: relative;
+  border: none;
+  outline: none;
+  padding: 18px 0 5px 0;
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  height: 30px;
+}
+.input_style:focus {
+  background-color: #fdfdfd;
+}
+.input_style::placeholder {
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  font-size: 20px;
+}
+.input_style:-webkit-autofill,
+.input_style:-webkit-autofill:hover,
+.input_stylet:-webkit-autofill:focus {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px hsl(0, 0%, 100%) inset;
+  -webkit-text-fill-color: #333;
+}
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder {
+  background-color: transparent;
+}
+.input_style:focus::placeholder,
+.input_style:not(:placeholder-shown)::placeholder {
+  top: 0;
+  transform: translateY(0);
+  font-size: 15px;
+  opacity: 1;
+  color: #999;
+  font-style: normal;
+}
+h5 {
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.login_btn,
+.register_btn {
+  position: relative;
+  padding: 8px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: #0d0c0c;
+  color: #e7f6f2;
+  transition: all 0.5s;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+.register_form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  gap: 1rem;
+}
+.register_info {
+  text-align: left;
+}
+.reset_btn {
+  position: relative;
+  padding: 8px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: #0d0c0c;
+  color: #e7f6f2;
+  transition: all 0.5s;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+h4 {
+  cursor: pointer;
+  text-decoration: underline;
+}
