@@ -1,0 +1,10 @@
+.main__heading {
+  display: flex;
+  flex-direction: column;
+}
+.main__heading h1 {
+  padding-left: 20px;
+}
+.main__heading img {
+  align-self: center;
+}

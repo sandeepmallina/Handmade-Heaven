@@ -9,6 +9,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { UnameProvider } from "./SimpleStateProvider/UnameProvider";
 import Login from "./Login-Components/Login";
+import Wishlist from "./WishListComponents/Wishlist";
 //restart needed after installing react router
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -44,6 +45,15 @@ function App() {
     <div className="app">
       <UnameProvider>
         <Routes>
+          <Route
+            path="/wishlist"
+            element={
+              <>
+                <Header />
+                <Wishlist />
+              </>
+            }
+          />
           <Route
             path="/register"
             element={
