@@ -75,7 +75,8 @@
 .rinput_style:-webkit-autofill,
 .rinput_style:-webkit-autofill:hover,
 .rinput_stylet:-webkit-autofill:focus {
-  background: transparent;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px hsl(0, 0%, 100%) inset;
   -webkit-text-fill-color: #333;
 }
 

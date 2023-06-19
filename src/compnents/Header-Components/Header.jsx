@@ -16,7 +16,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 function Header() {
   const history = useNavigate();
   const [{ basket, user }, dispatch] = useStateValue();
-  const { setUsername, userName } = useUserStateValue();
+  const { setUsername, userName, favorites } = useUserStateValue();
   const [showMenuitems, setShowMenuitems] = useState(false);
   const handleAuthentication = () => {
     if (user) {
@@ -97,7 +97,7 @@ function Header() {
             </div>
             <div className="wish__list__right__container wish__font">
               <p className="wish__info wish__font">wish list</p>
-              <p className="wish__info ">99</p>
+              <p className="wish__info ">{favorites.length}</p>
             </div>
           </div>
         </Link>

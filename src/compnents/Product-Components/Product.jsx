@@ -10,7 +10,14 @@ function Product(props) {
   const productData = useNavigate();
   const [state, dispatch] = useStateValue();
   const [isAdding, setIsAdding] = useState(false);
-  const { getItem, getCount } = useUserStateValue();
+  const {
+    getItem,
+    getCount,
+    addToFavorites,
+    getFavItem,
+    favorites,
+    removeFromFavorites,
+  } = useUserStateValue();
   const isPresent = getItem(props.id);
   const count = getCount(props.id);
   // console.log("this is basket", basket);
@@ -48,10 +55,32 @@ function Product(props) {
       },
     });
   };
+  const toggleFavorite = () => {
+    if (favorites.some((favProduct) => favProduct.id === props.id)) {
+      removeFromFavorites(props.id);
+    } else {
+      addToFavorites({
+        id: props.id,
+        title: props.title,
+        image: props.image,
+        price: props.price,
+        rating: props.rating,
+        description: props.description,
+      });
+    }
+  };
 
   return (
     <div className="product-card">
-      <div className="favourite-icon">
+      <div
+        className="favourite-icon"
+        style={{
+          backgroundColor:
+            favorites.some((favProduct) => favProduct.id === props.id) &&
+            "#ffb9b9",
+        }}
+        onClick={toggleFavorite}
+      >
         <GrFavorite size="1.2rem" />
       </div>
       <div className="product-image-container" onClick={addToPreview}>

@@ -10,6 +10,11 @@ function Login() {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
   const [showforgotpassword, setShowforgotpassword] = useState(false);
+  const [text, setText] = useState("");
+
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
   const signIn = (e) => {
     e.preventDefault();
 
@@ -63,20 +68,31 @@ function Login() {
             ) : (
               <h1 className="login_header">Reset Password</h1>
             )}
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="input_style"
-              placeholder="*Email"
-            />
+
+            <div className="input-container">
+              <input
+                type="text"
+                className="input_style"
+                id="input"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label
+                htmlFor="input"
+                className={email ? "label active" : "label"}
+              >
+                Enter Email
+              </label>
+              <div className="underline"></div>
+            </div>
             {!showforgotpassword && (
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="input_style"
-                placeholder="*Password"
+                placeholder="Password"
               />
             )}
             <br />

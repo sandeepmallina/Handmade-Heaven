@@ -17,9 +17,7 @@
   background-color: #f5f6f6;
   border-radius: 12.5rem;
 }
-.favourite-icon:hover {
-  background-color: #ffb9b9;
-}
+
 .product-image {
   height: 200px;
   margin: 5px;
