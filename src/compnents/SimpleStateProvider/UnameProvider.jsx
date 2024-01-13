@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useStateValue } from "../StateProvider/StateProvider";
 const UserContext = React.createContext();
 //  const initialstate = {
@@ -22,8 +22,8 @@ const UserContext = React.createContext();
 // };
 
 export function UnameProvider({ children }) {
-  const [state, dispatch] = useStateValue();
-  const [userName, setUserName] = useState();
+  const [state] = useStateValue();
+  const [userName, setUserName] = useState("");
   const [favorites, setFavorites] = useState([]);
 
   const addToFavorites = (product) => {
